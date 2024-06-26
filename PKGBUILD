@@ -2,7 +2,7 @@
 
 pkgname=wechat-universal
 pkgver=1.0.0.242
-pkgrel=1
+pkgrel=2
 pkgdesc="WeChat (Universal) with namespace sandboxing"
 arch=('x86_64' 'aarch64' 'loong64')
 url="https://weixin.qq.com"
@@ -36,6 +36,7 @@ options=(!strip !debug emptydirs)
 _lib_uos='libuosdevicea'
 
 source=(
+	"license.tar.gz"
 	"${pkgname}.sh"
 	"${pkgname}.desktop"
 	"${_lib_uos}".{c,Makefile}
@@ -53,6 +54,7 @@ source_loong64=("${_deb_url_common}_loongarch64.deb")
 noextract=("${_rpm_stem}"_{amd,arm}64.rpm "${_deb_stem}"_loongarch64.deb)
 
 sha256sums=(
+	'53760079c1a5b58f2fa3d5effe1ed35239590b288841d812229ef4e55b2dbd69'
 	'708b77df53a07c22ca621877892bf770158e80ba194db3cc74038c5466fbdb9e'
 	'b783b7b0035efb5a0fcb4ddba6446f645a4911e4a9f71475e408a5c87ef04c30'
 	'fc3ce9eb8dee3ee149233ebdb844d3733b2b2a8664422d068cf39b7fb08138f8'
