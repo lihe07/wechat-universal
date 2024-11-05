@@ -6,9 +6,9 @@ pkgrel=1
 pkgdesc="WeChat (Universal) with namespace sandboxing"
 arch=('x86_64' 'aarch64' 'loong64')
 url="https://weixin.qq.com"
-license=('proprietary', 'GPLv3')
+license=('proprietary' 'GPLv3')
 provides=("${pkgname}")
-conflicts=("${pkgname}"{,-bwrap,-privileged})
+conflicts=("${pkgname}"{-bwrap,-privileged})
 depends=(
   'alsa-lib'
   'at-spi2-core'
